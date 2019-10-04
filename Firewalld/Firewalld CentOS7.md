@@ -38,6 +38,18 @@
 
 	`$ sudo firewall-cmd --zone=public --list-ports`
 
+* List services
+
+	`$ sudo firewall-cmd --get-services
+
+* List services configured in a specific zone
+
+	`$ sudo firewall-cmd --zone=public --list-service
+
+* Add service
+
+	`$ sudo firewall-cmd --zone=public --add-service=samba --add-service=samba-client --permanent
+
 * Allow the default HTTP and HTTPS port to firewall to be public (for example 80)
 
 	`$ sudo firewall-cmd --permanent --add-port=80/tcp`
